@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine</title>
+    <link rel="website icon" type="png"
+    href="heart icon1.png">
+    <style>
+        :root {
+            --main-color: linear-gradient(to bottom, #ffb6c1, #ff69b4);
+            --font-family: "Open Sans", sans-serif;
+            --text-color: black;
+        }
+        body {
+            background: var(--main-color);
+            font-family: var(--font-family);
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        #question {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin-right: 10px;
+            border-radius: 10px;
+            transition: all 0.2s ease-in-out;
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #ff7f50;
+            color: white;
+        }
+        #yes {
+            background-color: green;
+        }
+        #no {
+            background-color: red;
+        }
+        #reset {
+            background-color: grey;
+        }
+        .watermark {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-family: var(--font-family);
+            font-size: 12px;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <h1 id="question">Will you go out with me?</h1>
+                <button class="btn" id="yes">Yes</button>
+                <button class="btn" id="no">No</button>
+                <button class="btn" id="reset">Reset</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="watermark">Created by Mark Archie Asuncion</p>
+    </footer>
+    <script>
+        const noBtn = document.getElementById('no');
+        const yesBtn = document.getElementById('yes');
+        const ques = document.getElementById('question');
+        noBtn.addEventListener("click", ()=>{
+            let rand = Math.floor(Math.random() * (500 - 100) + 1);
+            let rand2 = Math.floor(Math.random() * (-300 - 100) + 1);
+            noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+        });
+        yesBtn.addEventListener("click", ()=>{
+            ques.innerHTML = "ikaw ha <3"
+        });
+        const resetBtn = document.getElementById('reset');
+        resetBtn.addEventListener("click", () => {
+            noBtn.style.transform = "translate(0, 0)";
+            ques.innerHTML= "Will you go out with me?";
+        });
+    </script>
+  </body>
+</html>
