@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ako nalng kasi idol</title>
-    <link rel="website icon" type="png"
-    href="heart icon1.png">
+    <title>Be My Valentine</title>
+    <link rel="website icon" type="png" href="heart icon1.png">
     <style>
         :root {
             --main-color: linear-gradient(to bottom, #ffb6c1, #ff69b4);
@@ -50,9 +49,6 @@
         #no {
             background-color: red;
         }
-        #reset {
-            background-color: grey;
-        }
         .watermark {
             position: fixed;
             bottom: 10px;
@@ -61,17 +57,26 @@
             font-size: 12px;
             color: var(--text-color);
         }
+        input[type="text"] {
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid var(--text-color);
+            margin-right: 10px;
+            text-align: center;
+            width: 300px;
+            max-width: 100%;
+        }
     </style>
-    <bgsound src="paninindigan kita.mp3" loop=2>
 </head>
 <body>
     <main>
         <div class="wrapper">
             <div class="container">
-                <h1 id="question">idol I know I can treat you right. Wanna try?</h1>
+                <h1 id="question">Will you go out with me?</h1>
+                <input type="text" id="name" placeholder="Enter your name">
                 <button class="btn" id="yes">Yes</button>
                 <button class="btn" id="no">No</button>
-                <button class="btn" id="reset">Reset</button>
             </div>
         </div>
     </main>
@@ -82,19 +87,21 @@
         const noBtn = document.getElementById('no');
         const yesBtn = document.getElementById('yes');
         const ques = document.getElementById('question');
+        const nameInput = document.getElementById('name');
+        
         noBtn.addEventListener("mouseover", ()=>{
             let rand = Math.floor(Math.random() * (500 - 100) + 1);
             let rand2 = Math.floor(Math.random() * (-300 - 100) + 1);
             noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
         });
+
         yesBtn.addEventListener("click", ()=>{
-            ques.innerHTML = "idol naman <3"
-        });
-        const resetBtn = document.getElementById('reset');
-        resetBtn.addEventListener("click", () => {
-            noBtn.style.transform = "translate(0, 0)";
-            ques.innerHTML= "idol I know I can treat you right. Wanna try?";
+            const name = nameInput.value;
+            ques.innerHTML = "ikaw ha " + name + " <3";
+            setTimeout(function() {
+                window.location.href = "index1.html";
+            }, 5000);
         });
     </script>
-  </body>
+</body>
 </html>
