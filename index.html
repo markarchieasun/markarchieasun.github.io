@@ -57,24 +57,13 @@
             font-size: 12px;
             color: var(--text-color);
         }
-        input[type="text"] {
-            font-size: 1.2em;
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px solid var(--text-color);
-            margin-right: 10px;
-            text-align: center;
-            width: 300px;
-            max-width: 100%;
-        }
     </style>
 </head>
 <body>
     <main>
         <div class="wrapper">
             <div class="container">
-                <h1 id="question">Di mo na gagalawin yang kamay mo ah?</h1>
-                <input type="text" id="name" placeholder="Enter our callsign">
+                <h1 id="question">Would you like to go on a picnic date with me?</h1>
                 <button class="btn" id="yes">Yes</button>
                 <button class="btn" id="no">No</button>
             </div>
@@ -87,20 +76,15 @@
         const noBtn = document.getElementById('no');
         const yesBtn = document.getElementById('yes');
         const ques = document.getElementById('question');
-        const nameInput = document.getElementById('name');
-        
-        noBtn.addEventListener("mouseover", ()=>{
+
+        noBtn.addEventListener("mouseover", () => {
             let rand = Math.floor(Math.random() * (500 - 100) + 1);
             let rand2 = Math.floor(Math.random() * (-300 - 100) + 1);
-            noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+            noBtn.style.transform = "translate(" + rand + "px," + rand2 + "px)";
         });
 
-        yesBtn.addEventListener("click", ()=>{
-            const name = nameInput.value;
-            ques.innerHTML = "Happy Birthday and I Love You " + name + " <3";
-            setTimeout(function() {
-                window.location.href = "index1.html";
-            }, 7000);
+        yesBtn.addEventListener("click", () => {
+            ques.innerHTML = "Aacckkk, Tomorrow 4pm, Mwaaa <3";
         });
     </script>
 </body>
