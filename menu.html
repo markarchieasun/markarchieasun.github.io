@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <title>ReBrew Café</title>
+</head>
+<body>
+
+    <section class="header">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search">
+                    <button type="submit" id="search-button">Go</button>
+                </form>
+            </div>
+        </nav>
+    </section>
+
+    <main class="menu-body">
+        <aside class="menu-navbar">
+            <button onclick="filterCategory('coffee-classics')">Coffee Classics</button>
+            <button onclick="filterCategory('signature-coffees')">Signature Coffees</button>
+            <button onclick="filterCategory('non-coffee-drinks')">Non-Coffee Drinks</button>
+            <button onclick="filterCategory('seasonal-specials')">Seasonal Specials</button>
+            <button onclick="filterCategory('pastries-and-desserts')">Pastries & Desserts</button>
+            <button onclick="filterCategory('signature-pastries')">Signature Pastries</button>
+        </aside>
+
+        <section class="menu-container">
+            <div class="menu-category" id="coffee-classics">
+                <h2>Coffee Classics</h2>
+                <div id="coffee-classics-items"></div>
+            </div>
+            <div class="menu-category" id="signature-coffees">
+                <h2>Signature Drinks</h2>
+                <div id="signature-coffees-items"></div>
+            </div>
+            <div class="menu-category" id="non-coffee-drinks">
+                <h2>Non-Coffee Beverages</h2>
+                <div id="non-coffee-drinks-items"></div>
+            </div>
+            <div class="menu-category" id="seasonal-specials">
+                <h2>Seasonal Specials</h2>
+                <div id="seasonal-specials-items"></div>
+            </div>
+            <div class="menu-category" id="pastries-and-desserts">
+                <h2>Pastries & Desserts</h2>
+                <div id="pastries-and-desserts-items"></div>
+            </div>
+            <div class="menu-category" id="signature-pastries">
+                <h2>Signature Pastries</h2>
+                <div id="signature-pastries-items"></div>
+            </div>
+        </section>
+
+        <section class="cartbar">
+            <div class="head">Cart</div>
+            <div id="cart-items"></div>
+            <div id="total-price">Total: ₱0</div><button id="checkout-btn">Checkout</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>Thank you for supporting ReBrew Café</h2>
+        <p>We appreciate your visit and commitment to sustainability!</p>
+    </footer>
+
+    <script src="addtocart.js"></script>
+</body>
+</html>
