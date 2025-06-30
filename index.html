@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To you, Bal</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="envelope-wrapper">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong>My Dearest Prisha,</strong>
+            <p>
+              It’s been a month since we started, and we’ve already faced challenges together and with ease.
+              I’m so grateful for your patience and understanding. Thank you for being you.<br><br>
+              I’m sorry we haven’t had our first date yet, but we’ll make it happen soon.
+              I can’t wait to experience what it’s like to be truly loved by you.
+              I know commitment feels scary right now, but I’ll do my best to show you it’s worth the risk.<br><br>
+              You’re my dream girl, maybe even the answer to my prayers.
+              Cheers to our first month together, and to many more to come.
+            </p>
+            <strong>With all my love, <br> Mark</strong>
+          </div>
+        </div>
+      </div>
+      <div class="heart"></div>
+    </div>
+  </div>
+  <script>
+    const envelope = document.querySelector('.envelope-wrapper');
+    envelope.addEventListener('click', () => {
+      envelope.classList.toggle('flap');
+    });
+  </script>
+</body>
+</html>
