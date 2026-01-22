@@ -1,40 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To you, Bal</title>
-  <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tayo sa Huling Buwan ng Taon</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="envelope-wrapper">
-      <div class="envelope">
-        <div class="letter">
-          <div class="text">
-            <strong>My Dearest Prisha,</strong>
-            <p>
-              It’s been a month since we started, and we’ve already faced challenges together and with ease.
-              I’m so grateful for your patience and understanding. Thank you for being you.<br><br>
-              I’m sorry we haven’t had our first date yet, but we’ll make it happen soon.
-              I can’t wait to experience what it’s like to be truly loved by you.
-              I know commitment feels scary right now, but I’ll do my best to show you it’s worth the risk.<br><br>
-              You’re my dream girl, maybe even the answer to my prayers.
-              Cheers to our first month together, and to many more to come.
-            </p>
-            <strong>With all my love, <br> Mark</strong>
-          </div>
-        </div>
-      </div>
-      <div class="heart"></div>
+    <div class="background" style="background-image: url('bgimg2.jpg');"></div>
+
+    <main>
+        <section class="content home">
+            <div class="flex-container">
+                <div class="poster-container">
+                    <img src="TSHBNT.jpg" alt="Film Poster" class="film-poster">
+                </div>
+                <div class="text-content">
+                    <h2 class="synopsis-title">Tayo sa Huling Buwan ng Taon (2019)</h2>
+                    <p class="synopsis">Five years after their break-up, ex-lovers turned friends Sam and Isa attempt to find their own selves in the realm of their respective romantic relationships. What they discover instead is pain and uncertainty as they come to terms with their feelings for each other and everyone around them.</p>
+                    <div class="button-container">
+                        <button class="watch-button" id="watchButton">Watch Now</button>
+                        <button class="share-button" id="shareButton">Share Film</button>
+                    </div>
+                    <p id="shareStatus" class="status-msg">Link copied to clipboard!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content about">
+            <h2 class="section-title">About</h2>
+            <p class="about-text">"Tayo sa Huling Buwan ng Taon" (In the Last Month of the Year) is a 2019 Filipino romance-drama film directed by Nestor Abrogena. It is the sequel to the 2015 film "Ang Kuwento Nating Dalawa," continuing the emotional journey of its central characters, Sam and Isa. The film explores themes of nostalgia, self-discovery, and unresolved emotions, capturing the essence of modern romance.</p>
+        </section>
+
+        <section id="rating-section" class="content">
+            <h2 class="section-title">Rate this Film</h2>
+            <div class="rating-container">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            <p id="rating-message">Click a star to leave a rating!</p>
+        </section>
+
+        <section id="cast" class="content cast">
+            <h2 class="section-title">Cast</h2>
+            <div class="cast-grid">
+                <div class="cast-member">
+                    <a href="https://www.imdb.com/name/nm3173851/" target="_blank" class="cast-link">
+                        <img src="SAM.png" alt="Sam" class="cast-image">
+                        <p class="real-name">Nicco Manalo</p>
+                    </a>
+                </div>
+                <div class="cast-member">
+                    <a href="https://www.imdb.com/name/nm4046964/" target="_blank" class="cast-link">
+                        <img src="ISA.png" alt="Isa" class="cast-image">
+                        <p class="real-name">Emmanuelle Vera</p>
+                    </a>
+                </div>
+                <div class="cast-member">
+                    <a href="https://www.imdb.com/name/nm4200805/" target="_blank" class="cast-link">
+                        <img src="ANNA.png" alt="Anna" class="cast-image">
+                        <p class="real-name">Anna Luna</p>
+                    </a>
+                </div>
+                <div class="cast-member">
+                    <a href="https://www.imdb.com/name/nm1905455/" target="_blank" class="cast-link">
+                        <img src="FRANK.png" alt="Frank" class="cast-image">
+                        <p class="real-name">Alex Medina</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="comments-section" class="content">
+            <h2 class="section-title">User Reviews</h2>
+            <div class="comment-input-area">
+                <input type="text" id="userName" placeholder="Your Name" class="input-field">
+                <textarea id="commentText" placeholder="Write a review..." rows="4" class="input-field"></textarea>
+                <div class="button-container">
+                    <button class="watch-button" id="postComment">Post Review</button>
+                </div>
+            </div>
+            <div id="commentsList" style="margin-top: 20px;"></div>
+        </section>
+
+        <section id="stills" class="content stills">
+            <h2 class="section-title">Stills</h2>
+            <div class="stills-grid">
+                <img src="still1.jpg" alt="Still 1" class="still-image">
+                <img src="still2.jpg" alt="Still 2" class="still-image">
+                <img src="still3.jpg" alt="Still 3" class="still-image">
+                <img src="still4.jpg" alt="Still 4" class="still-image">
+                <img src="still5.jpg" alt="Still 5" class="still-image">
+                <img src="still6.jpg" alt="Still 6" class="still-image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024. All rights reserved to the rightful owner.</p>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <div class="video-modal" id="videoModal">
+        <button class="close-modal" id="closeModal">X</button>
+        <iframe id="youtubeEmbed" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
     </div>
-  </div>
-  <script>
-    const envelope = document.querySelector('.envelope-wrapper');
-    envelope.addEventListener('click', () => {
-      envelope.classList.toggle('flap');
-    });
-  </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
