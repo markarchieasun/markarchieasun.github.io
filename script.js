@@ -17,7 +17,7 @@ const youtubeEmbed = document.getElementById('youtubeEmbed');
 const closeModal = document.getElementById('closeModal');
 
 watchButton.addEventListener('click', () => {
-    youtubeEmbed.src = "https://www.youtube-nocookie.com/embed/9sGA_OTREzw?si=iCnmu14t95yS80Uc&autoplay=1";
+    youtubeEmbed.src = "https://www.youtube.com/embed/TUjZPifUNmU?autoplay=1";
     videoModal.style.display = 'flex';
 });
 
@@ -78,4 +78,5 @@ postBtn.addEventListener('click', () => {
     
     document.getElementById('userName').value = "";
     document.getElementById('commentText').value = "";
+
 });
